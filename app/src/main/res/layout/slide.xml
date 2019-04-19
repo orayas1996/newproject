@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/aphabet"
+        android:layout_width="246dp"
+        android:layout_height="55dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="339dp"
+        android:layout_marginTop="46dp"
+        android:text="Hello World!"
+        android:textSize="40dp" />
+
+
+    <TextView
+        android:id="@+id/ex1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="168dp"
+        android:text="Hello World!"
+        android:textSize="40dp" />
+
+    <TextView
+        android:id="@+id/ex2"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_alignTop="@+id/ex1"
+        android:layout_centerHorizontal="true"
+        android:text="Hello "
+        android:textSize="40dp" />
+
+    <TextView
+        android:id="@+id/ex3"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_alignLeft="@+id/img3"
+        android:layout_alignTop="@+id/ex1"
+        android:text="World!"
+        android:textSize="40dp" />
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="125dp"
+        android:layout_height="133dp"
+        android:layout_alignBottom="@+id/img2"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="110dp"
+        app:srcCompat="@drawable/d1" />
+
+    <ImageView
+        android:id="@+id/img2"
+        android:layout_width="134dp"
+        android:layout_height="115dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="154dp"
+        app:srcCompat="@drawable/d1" />
+
+    <ImageView
+        android:id="@+id/img3"
+        android:layout_width="129dp"
+        android:layout_height="107dp"
+        android:layout_alignBottom="@+id/img1"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="115dp"
+        app:srcCompat="@drawable/d1" />
+
+
+
+
+
+</RelativeLayout>
