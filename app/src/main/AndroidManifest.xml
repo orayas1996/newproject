@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".menu"
+            android:name=".login"
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,7 +24,7 @@
             android:name=".MainActivity"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".match_one"
+            android:name=".menu"
             android:screenOrientation="landscape" />
         <activity
             android:name=".match_two"
@@ -33,7 +33,7 @@
             android:name=".match_t"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".login"
+            android:name=".match_one"
             android:screenOrientation="landscape" />
         <activity android:name=".Reg"  android:screenOrientation="landscape">
 

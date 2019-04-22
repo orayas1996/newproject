@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         prev.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                slideview.setCurrentItem(slideview.getCurrentItem() - 1);
+                slideview.setCurrentItem(slideview.getCurrentItem());
             }
         });
 

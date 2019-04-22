@@ -31,6 +31,8 @@ public class match_one extends AppCompatActivity {
     private Chronometer chronometer;
     private boolean running;
     private long stop,correct_time;
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    private FirebaseAuth mAuth;
 
 
 
@@ -46,9 +48,11 @@ public class match_one extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.match_one);
 
+        mAuth = FirebaseAuth.getInstance();
 
 
 
+        chronometer = findViewById(R.id.chronometer);
         Button btn = (Button) findViewById(R.id.butlevel);
         final Button btn_s = (Button) findViewById(R.id.start);
 
@@ -268,6 +272,9 @@ public class match_one extends AppCompatActivity {
     }
 
     private void checkend() {
+
+
+
         if (iv11.getVisibility() == View.INVISIBLE &&
                 iv12.getVisibility() == View.INVISIBLE &&
                 iv13.getVisibility() == View.INVISIBLE &&
@@ -287,6 +294,13 @@ public class match_one extends AppCompatActivity {
             });
             endtime();
         }
+        String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+//        FirebaseUser currentUser = mAuth.getCurrentUser().getUid();
+        Log.d("zzzz","oo " + userId);
+        DatabaseReference myRef = database.getReference("score").child(userId);
+        Log.d("zzzz","ref " + myRef);
+        Log.d("zzzz","sc " + correct_time);
+        myRef.setValue(correct_time);
     }
 
     private void endtime(){
