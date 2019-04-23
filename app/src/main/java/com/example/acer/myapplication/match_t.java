@@ -369,6 +369,7 @@ public class match_t extends AppCompatActivity {
     }
 
     private void checkend(){
+        final long t2 = getIntent().getExtras().getLong("time2");
         if(iv11.getVisibility() == View.INVISIBLE &&
                 iv12.getVisibility() == View.INVISIBLE &&
                 iv13.getVisibility() == View.INVISIBLE &&
@@ -389,7 +390,9 @@ public class match_t extends AppCompatActivity {
             btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent i = new Intent(match_t.this, menu.class);
+                    Intent i = new Intent(match_t.this, Data.class);
+//                    Intent in = new Intent(match_t.this,Data.class);
+                    i.putExtra("time3",correct_time+t2);
                     startActivity(i);
                 }
             });

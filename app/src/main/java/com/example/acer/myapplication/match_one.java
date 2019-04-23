@@ -31,8 +31,8 @@ public class match_one extends AppCompatActivity {
     private Chronometer chronometer;
     private boolean running;
     private long stop,correct_time;
-    FirebaseDatabase database = FirebaseDatabase.getInstance();
-    private FirebaseAuth mAuth;
+//    FirebaseDatabase database = FirebaseDatabase.getInstance();
+
 
 
 
@@ -48,7 +48,7 @@ public class match_one extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.match_one);
 
-        mAuth = FirebaseAuth.getInstance();
+
 
 
 
@@ -289,20 +289,20 @@ public class match_one extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Intent i = new Intent(match_one.this, match_two.class);
-                    Intent in = new Intent(match_one.this,Data.class);
-                    in.putExtra("time1",correct_time);
+//                    Intent in = new Intent(match_one.this,Data.class);
+                    i.putExtra("time1",correct_time);
                     startActivity(i);
                 }
             });
             endtime();
         }
-        String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
-//        FirebaseUser currentUser = mAuth.getCurrentUser().getUid();
-        Log.d("zzzz","oo " + userId);
-        DatabaseReference myRef = database.getReference("score").child(userId);
-        Log.d("zzzz","ref " + myRef);
-        Log.d("zzzz","sc " + correct_time);
-        myRef.setValue(correct_time);
+//        String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+////        FirebaseUser currentUser = mAuth.getCurrentUser().getUid();
+//        Log.d("zzzz","oo " + userId);
+//        DatabaseReference myRef = database.getReference("score").child(userId);
+//        Log.d("zzzz","ref " + myRef);
+//        Log.d("zzzz","sc " + correct_time);
+//        myRef.setValue(correct_time);
     }
 
     private void endtime(){

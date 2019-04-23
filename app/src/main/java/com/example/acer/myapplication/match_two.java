@@ -298,6 +298,7 @@ public class match_two extends AppCompatActivity {
     }
 
     private void checkend(){
+        final long t1 = getIntent().getExtras().getLong("time1");
         if(iv11.getVisibility() == View.INVISIBLE &&
                 iv12.getVisibility() == View.INVISIBLE &&
                 iv13.getVisibility() == View.INVISIBLE &&
@@ -315,6 +316,8 @@ public class match_two extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Intent i = new Intent(match_two.this, match_t.class);
+//                    Intent in = new Intent(match_two.this,Data.class);
+                    i.putExtra("time2",correct_time+t1);
                     startActivity(i);
                 }
             });
