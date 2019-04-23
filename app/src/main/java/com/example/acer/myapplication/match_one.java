@@ -289,6 +289,8 @@ public class match_one extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Intent i = new Intent(match_one.this, match_two.class);
+                    Intent in = new Intent(match_one.this,Data.class);
+                    in.putExtra("time1",correct_time);
                     startActivity(i);
                 }
             });

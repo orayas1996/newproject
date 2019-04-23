@@ -35,9 +35,13 @@
         <activity
             android:name=".match_one"
             android:screenOrientation="landscape" />
-        <activity android:name=".Reg"  android:screenOrientation="landscape">
-
-        </activity>
+        <activity
+            android:name=".Reg"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Data"
+            android:label="@string/title_activity_data"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
