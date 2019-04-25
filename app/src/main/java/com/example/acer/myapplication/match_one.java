@@ -137,41 +137,14 @@ public class match_one extends AppCompatActivity {
     }
 
     private void time() {
-        final TextView time = (TextView) findViewById(R.id.time);
-        Thread t = new Thread() {
-            @Override
-            public void run() {
-                while (!isInterrupted()) {
 
-                    try {
-                        Thread.sleep(1000);
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                if (count == 1) {
-                                    chronometer.setVisibility(View.VISIBLE);
-                                    if (!running) {
-                                        chronometer.setBase(SystemClock.elapsedRealtime());
-                                        chronometer.start();
-                                        running = true;
-                                    }
-                                    time.setVisibility(View.INVISIBLE);
-                                    count = 0;
+        chronometer.setVisibility(View.VISIBLE);
+        if (!running) {
+            chronometer.setBase(SystemClock.elapsedRealtime());
+            chronometer.start();
+            running = true;
+        }
 
-                                } else
-                                    count--;
-
-                                time.setText(String.valueOf(count));
-                            }
-                        });
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                        return;
-                    }
-                }
-            }
-        };
-        t.start();
 
     }
 
