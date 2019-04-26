@@ -26,7 +26,7 @@ public class Data extends AppCompatActivity {
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     private ListView mlistv;
-    private ArrayList<String> score = new ArrayList<>();
+    private ArrayList<Long> score = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +42,7 @@ public class Data extends AppCompatActivity {
         myRef.push().setValue(total_time);
 
         mlistv = (ListView) findViewById(R.id.listview);
-        final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,score);
+        final ArrayAdapter<Long> arrayAdapter = new ArrayAdapter<Long>(this, android.R.layout.simple_list_item_1,score);
 
         mlistv.setAdapter(arrayAdapter);
 
@@ -50,10 +50,11 @@ public class Data extends AppCompatActivity {
         myRef.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-                String value = dataSnapshot.getValue(String.class);
+                long value = dataSnapshot.getValue(long.class);
+                Log.d("fff","value is "+ value);
                 score.add(value);
                 arrayAdapter.notifyDataSetChanged();
-                Log.d("fff","value is "+ value);
+
             }
 
             @Override

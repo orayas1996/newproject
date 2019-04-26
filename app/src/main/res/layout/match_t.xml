@@ -26,16 +26,6 @@
             android:text="เริ่มเกมส์"
             android:textSize="32dp" />
 
-        <TextView
-            android:id="@+id/time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="131dp"
-            android:text=""
-            android:textSize="100dp" />
-
         <Chronometer
             android:id="@+id/chronometer"
             android:layout_width="wrap_content"
