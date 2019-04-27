@@ -37,11 +37,12 @@
             android:screenOrientation="landscape" />
         <activity
             android:name=".Reg"
-            android:screenOrientation="landscape"></activity>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".Data"
             android:label="@string/title_activity_data"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".teacher"></activity>
     </application>
 
 </manifest>

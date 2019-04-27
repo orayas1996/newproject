@@ -34,6 +34,7 @@ public class login extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         final Button login = (Button) findViewById(R.id.loginn);
+        Button teach = (Button) findViewById(R.id.teach);
         TextView butsignup = (TextView) findViewById(R.id.signup);
         user = (EditText) findViewById(R.id.Username);
         pass = (EditText) findViewById(R.id.password);
@@ -53,6 +54,7 @@ public class login extends AppCompatActivity {
                 Userlogin();
             }
         });
+
 
     }
 
