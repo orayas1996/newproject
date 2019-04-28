@@ -23,7 +23,7 @@ public class login extends AppCompatActivity {
     FirebaseAuth mAuth;
     EditText user,pass;
     TextView butsignup;
-    Button login;
+    Button login,teach;
 //    private DatabaseReference mDatabase;
 
 
@@ -43,6 +43,7 @@ public class login extends AppCompatActivity {
         butsignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                finish();
                 Intent i = new Intent(login.this,Reg.class);
                 startActivity(i);
             }
@@ -54,6 +55,15 @@ public class login extends AppCompatActivity {
                 Userlogin();
             }
         });
+
+        teach.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(login.this,teacher.class);
+                startActivity(i);
+            }
+        });
+
 
 
     }
@@ -100,6 +110,7 @@ public class login extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
+
                     Intent i = new Intent(login.this,menu.class);
                     startActivity(i);
                     i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -110,4 +121,12 @@ public class login extends AppCompatActivity {
         });
 
     }
+
+//    @Override
+//    protected void onStart() {
+//        super.onStart();
+//        if(mAuth.getCurrentUser() == null){
+//            startActivity(new Intent(this,User.class));
+//        }
+//    }
 }

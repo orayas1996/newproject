@@ -16,6 +16,11 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class Reg extends AppCompatActivity {
 
@@ -44,14 +49,14 @@ public class Reg extends AppCompatActivity {
 
     }
     private  void regisUser(){
-        String names = name.getText().toString().trim();
+       final  String names = name.getText().toString().trim();
         String email = user.getText().toString().trim();
         String passw = pass.getText().toString().trim();
-        boolean valid = true;
+        final String user_id = mAuth.getCurrentUser().getUid();
 
-        if (names.isEmpty() || names.length() < 5) {
-            name.setError("at least 3 characters");
-            valid = false;
+
+        if (names.isEmpty()) {
+            name.setError("กรุณาใส่ชื่อ");
         } else {
             name.setError(null);
         }
@@ -88,12 +93,13 @@ public class Reg extends AppCompatActivity {
                     Intent i = new Intent(Reg.this,login.class);
                     startActivity(i);
                     i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    final ProgressDialog progressDialog = new ProgressDialog(Reg.this,
-                            R.style.Theme_AppCompat_DayNight_Dialog);
-                    progressDialog.setIndeterminate(true);
-                    progressDialog.setMessage("สร้างบัญชีผู้ใช้");
-                    progressDialog.show();
                     Toast.makeText(getApplicationContext(),"บันทึก",Toast.LENGTH_SHORT).show();
+                    DatabaseReference current_us = FirebaseDatabase.getInstance().getReference().child("Users").child(user_id).child("name");
+
+                    Map newPost = new HashMap();
+                    newPost.put("name",names);
+
+                    current_us.setValue(newPost);
 
 
                 }else{

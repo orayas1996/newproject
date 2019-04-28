@@ -11,15 +11,5 @@
         android:layout_height="100dp"
         android:text="Button" />
 
-    <Button
-        android:id="@+id/teach"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginRight="96dp"
-        android:layout_marginTop="30dp"
-        android:text="สำหรับอาจารย์"
-        />
 
 </LinearLayout>

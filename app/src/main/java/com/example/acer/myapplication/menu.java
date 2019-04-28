@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class menu extends AppCompatActivity {
 
-    private Button but,teach;
+    private Button but;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +18,7 @@ public class menu extends AppCompatActivity {
         setContentView(R.layout.menu);
 
         but = (Button) findViewById(R.id.button);
-        teach = (Button) findViewById(R.id.teach);
+
 
         but.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,13 +28,6 @@ public class menu extends AppCompatActivity {
             }
         });
 
-        teach.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(menu.this,teacher.class);
-                startActivity(i);
-            }
-        });
 
     }
 }
