@@ -41,8 +41,8 @@ public class teacher extends AppCompatActivity {
 
         namelist.setAdapter(arrayAdapter);
 
-        String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
-        DatabaseReference myRef = database.getReference().child("Users").child(userId).child("name");
+        String userId = FirebaseAuth.getInstance().getUid();
+        DatabaseReference myRef = database.getReference("Users").child(userId);
 
         myRef.addChildEventListener(new ChildEventListener() {
             @Override

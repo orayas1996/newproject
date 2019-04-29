@@ -52,7 +52,7 @@ public class Reg extends AppCompatActivity {
        final  String names = name.getText().toString().trim();
         String email = user.getText().toString().trim();
         String passw = pass.getText().toString().trim();
-        final String user_id = mAuth.getCurrentUser().getUid();
+
 
 
         if (names.isEmpty()) {
@@ -94,12 +94,17 @@ public class Reg extends AppCompatActivity {
                     startActivity(i);
                     i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     Toast.makeText(getApplicationContext(),"บันทึก",Toast.LENGTH_SHORT).show();
-                    DatabaseReference current_us = FirebaseDatabase.getInstance().getReference().child("Users").child(user_id).child("name");
+
+                    DatabaseReference current_us = FirebaseDatabase.getInstance().getReference("Users");
+//                    String id = current_us.push().getKey();
+                    String user_id = mAuth.getCurrentUser().getUid();
+
 
                     Map newPost = new HashMap();
                     newPost.put("name",names);
 
-                    current_us.setValue(newPost);
+                    current_us.child(user_id).child("name").setValue(newPost);
+                    name.setText("");
 
 
                 }else{

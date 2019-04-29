@@ -38,7 +38,7 @@ public class Data extends AppCompatActivity {
         long total_time = t3;
 
         String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
-        DatabaseReference myRef = database.getReference().child("Users").child(userId).child("score1");
+        DatabaseReference myRef = database.getReference("Users").child(userId).child("score1");
         myRef.push().setValue(total_time);
 
         mlistv = (ListView) findViewById(R.id.listview);
