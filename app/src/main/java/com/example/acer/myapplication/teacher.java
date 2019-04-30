@@ -42,16 +42,23 @@ public class teacher extends AppCompatActivity {
         namelist.setAdapter(arrayAdapter);
 
         String userId = FirebaseAuth.getInstance().getUid();
-        DatabaseReference myRef = database.getReference("Users").child(userId);
+        Log.d("fff","value =" + userId);
+        DatabaseReference myRef = database.getReference("Users");
 
         myRef.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-                String value = dataSnapshot.getValue(String.class);
-                Log.d("fff","value is "+ value);
-                name.add(value);
-                arrayAdapter.notifyDataSetChanged();
+                for( DataSnapshot namesnap : dataSnapshot.getChildren()) {
+//                    Log.v("mmm",""+ namesnap.child("name").getKey()); //displays the key for the node
+                    String value = namesnap.child("name").getValue(String.class);
+                    Log.d("tmz",""+ namesnap.child("name").getValue());
+                    name.add(value);
+//
+//                    String value = dataSnapshot.getValue(String.class);
+                    Log.d("fff", "value is " + value);
+                    arrayAdapter.notifyDataSetChanged();
 
+                }
             }
 
             @Override
