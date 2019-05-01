@@ -49,9 +49,6 @@ public class match_one extends AppCompatActivity {
         setContentView(R.layout.match_one);
 
 
-
-
-
         chronometer = findViewById(R.id.chronometer);
         Button btn = (Button) findViewById(R.id.butlevel);
         final Button btn_s = (Button) findViewById(R.id.start);
@@ -192,7 +189,7 @@ public class match_one extends AppCompatActivity {
                 public void run() {
                     calculate();
                 }
-            }, 1000);
+            }, 500);
         }
     }
 

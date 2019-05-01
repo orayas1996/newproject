@@ -252,7 +252,7 @@ public class match_t extends AppCompatActivity {
                 public void run() {
                     calculate();
                 }
-            }, 1000);
+            }, 500);
         }
 
     }

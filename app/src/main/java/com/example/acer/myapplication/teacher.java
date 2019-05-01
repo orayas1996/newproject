@@ -1,10 +1,13 @@
 package com.example.acer.myapplication;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -42,7 +45,7 @@ public class teacher extends AppCompatActivity {
         namelist.setAdapter(arrayAdapter);
 
         String userId = FirebaseAuth.getInstance().getUid();
-        Log.d("fff","value =" + userId);
+
         DatabaseReference myRef = database.getReference("Users");
 
         myRef.addChildEventListener(new ChildEventListener() {
@@ -51,9 +54,10 @@ public class teacher extends AppCompatActivity {
                 for( DataSnapshot namesnap : dataSnapshot.getChildren()) {
 //                    Log.v("mmm",""+ namesnap.child("name").getKey()); //displays the key for the node
                     String value = namesnap.child("name").getValue(String.class);
-                    Log.d("tmz",""+ namesnap.child("name").getValue());
+                    Log.d("tmz",""+ value);
+                    if(value != null){
                     name.add(value);
-//
+                  }
 //                    String value = dataSnapshot.getValue(String.class);
                     Log.d("fff", "value is " + value);
                     arrayAdapter.notifyDataSetChanged();
@@ -83,5 +87,13 @@ public class teacher extends AppCompatActivity {
         });
 
 
+        namelist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent i = new Intent(teacher.this,Data.class);
+                i.putExtra("score",namelist.getItemAtPosition(position).toString());
+                startActivity(i);
+            }
+        });
     }
 }

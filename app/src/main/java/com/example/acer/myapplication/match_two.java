@@ -204,7 +204,7 @@ public class match_two extends AppCompatActivity {
                 public void run() {
                     calculate();
                 }
-            }, 1000);
+            }, 500);
         }
 
     }

@@ -41,6 +41,7 @@ public class Data extends AppCompatActivity {
         DatabaseReference myRef = database.getReference("Users").child(userId).child("score1");
         myRef.push().setValue(total_time);
 
+
         mlistv = (ListView) findViewById(R.id.listview);
         final ArrayAdapter<Long> arrayAdapter = new ArrayAdapter<Long>(this, android.R.layout.simple_list_item_1,score);
 
