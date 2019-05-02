@@ -41,6 +41,11 @@ public class Data extends AppCompatActivity {
         DatabaseReference myRef = database.getReference("Users").child(userId).child("score1");
         myRef.push().setValue(total_time);
 
+        //get user id
+        final String id_user = getIntent().getExtras().getString("id");
+
+        DatabaseReference myRef2 = database.getReference("Users").child(id_user).child("score1");
+
 
         mlistv = (ListView) findViewById(R.id.listview);
         final ArrayAdapter<Long> arrayAdapter = new ArrayAdapter<Long>(this, android.R.layout.simple_list_item_1,score);
@@ -48,10 +53,11 @@ public class Data extends AppCompatActivity {
         mlistv.setAdapter(arrayAdapter);
 
 
-        myRef.addChildEventListener(new ChildEventListener() {
+        myRef2.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
                 long value = dataSnapshot.getValue(long.class);
+                Log.d("fff","id is "+ id_user);
                 Log.d("fff","value is "+ value);
                 score.add(value);
                 arrayAdapter.notifyDataSetChanged();

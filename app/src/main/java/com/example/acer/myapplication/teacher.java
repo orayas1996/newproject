@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -44,7 +45,7 @@ public class teacher extends AppCompatActivity {
 
         namelist.setAdapter(arrayAdapter);
 
-        String userId = FirebaseAuth.getInstance().getUid();
+        final String userId = FirebaseAuth.getInstance().getUid();
 
         DatabaseReference myRef = database.getReference("Users");
 
@@ -54,12 +55,14 @@ public class teacher extends AppCompatActivity {
                 for( DataSnapshot namesnap : dataSnapshot.getChildren()) {
 //                    Log.v("mmm",""+ namesnap.child("name").getKey()); //displays the key for the node
                     String value = namesnap.child("name").getValue(String.class);
+                    String id = namesnap.child("id").getValue(String.class);
+                    Log.d("tm",""+ id);
                     Log.d("tmz",""+ value);
                     if(value != null){
                     name.add(value);
                   }
 //                    String value = dataSnapshot.getValue(String.class);
-                    Log.d("fff", "value is " + value);
+//                    Log.d("fff", "value is " + value);
                     arrayAdapter.notifyDataSetChanged();
 
                 }
@@ -91,9 +94,12 @@ public class teacher extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent i = new Intent(teacher.this,Data.class);
-                i.putExtra("score",namelist.getItemAtPosition(position).toString());
+                i.putExtra("id",userId);
                 startActivity(i);
+
+
             }
         });
+
     }
 }
