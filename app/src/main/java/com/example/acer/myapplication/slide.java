@@ -49,13 +49,13 @@ public class slide extends PagerAdapter{
             "ษ.บอฤษี"
     };
     public String[] exs_1= {
-            "ไม้กวาด",
-            "รถ",
-            "กระดาษ"
+            "ไม้ - กวาด",
+            "รด",
+            "กระ - ดาด"
     };
     public String[] exs_2= {
-            "ลูกกวาด",
-            "โลถ",
+            "ลูก - กวาด",
+            "นด",
             "ษ"
     };
     public String[] exs_3= {
@@ -63,6 +63,22 @@ public class slide extends PagerAdapter{
             "ถถ",
             "ษษ"
     };
+    public String[] word_1= {
+            "ไม้กวาด",
+            "รถ",
+            "กระดาษ"
+    };
+    public String[] word_2= {
+            "ลูกกวาด",
+            "นถ",
+            "ษษษ"
+    };
+    public String[] word_3= {
+            "กระจาด",
+            "ถถ",
+            "ษษ"
+    };
+
     @Override
     public int getCount() {
         return alphabets.length;
@@ -86,7 +102,9 @@ public class slide extends PagerAdapter{
         TextView ex1 = (TextView) view.findViewById(R.id.ex1);
         TextView ex2 = (TextView) view.findViewById(R.id.ex2);
         TextView ex3 = (TextView) view.findViewById(R.id.ex3);
-
+        TextView word1 = (TextView) view.findViewById(R.id.word1);
+        TextView word2 = (TextView) view.findViewById(R.id.word2);
+        TextView word3 = (TextView) view.findViewById(R.id.word3);
 
         slideimg_1.setImageResource(slideimgs_1[position]);
         slideimg_2.setImageResource(slideimgs_2[position]);
@@ -95,6 +113,9 @@ public class slide extends PagerAdapter{
         ex1.setText(exs_1[position]);
         ex2.setText(exs_2[position]);
         ex3.setText(exs_3[position]);
+        word1.setText(word_1[position]);
+        word2.setText(word_2[position]);
+        word3.setText(word_3[position]);
 
 
         container.addView(view);

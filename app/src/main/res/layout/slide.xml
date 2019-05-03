@@ -6,8 +6,8 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_height="400dp"
-        android:layout_width="800dp"
+        android:layout_height="450dp"
+        android:layout_width="850dp"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:background="@color/colorAccent"/>
@@ -17,9 +17,10 @@
         android:id="@+id/aphabet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="46dp"
-        android:text="Hello World!"
+        android:layout_marginTop="50dp"
+        android:text="ด.เด็ก"
         android:textSize="80dp" />
 
 
@@ -27,60 +28,85 @@
         android:id="@+id/ex1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/img1"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="65dp"
-        android:layout_marginTop="168dp"
+        android:layout_marginLeft="329dp"
         android:text="Hello World!"
-        android:textSize="40dp" />
+        android:textSize="35dp" />
 
     <TextView
         android:id="@+id/ex2"
         android:layout_width="wrap_content"
-        android:layout_height="55dp"
-        android:layout_alignTop="@+id/ex1"
-        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/img2"
+        android:layout_alignLeft="@+id/ex1"
         android:text="Hello "
-        android:textSize="40dp" />
+        android:textSize="35dp" />
 
     <TextView
         android:id="@+id/ex3"
         android:layout_width="wrap_content"
-        android:layout_height="55dp"
-        android:layout_alignLeft="@+id/img3"
-        android:layout_alignTop="@+id/ex1"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/img3"
+        android:layout_alignLeft="@+id/ex1"
         android:text="World!"
-        android:textSize="40dp" />
+        android:textSize="35dp" />
 
     <ImageView
         android:id="@+id/img1"
-        android:layout_width="125dp"
-        android:layout_height="133dp"
-        android:layout_alignBottom="@+id/img2"
+        android:layout_width="85dp"
+        android:layout_height="84dp"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="110dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="193dp"
+        android:layout_marginTop="150dp"
         app:srcCompat="@drawable/d1" />
 
     <ImageView
         android:id="@+id/img2"
-        android:layout_width="134dp"
-        android:layout_height="115dp"
+        android:layout_width="85dp"
+        android:layout_height="84dp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="154dp"
+        android:layout_marginLeft="193dp"
+        android:layout_marginBottom="200dp"
         app:srcCompat="@drawable/d1" />
 
     <ImageView
         android:id="@+id/img3"
-        android:layout_width="129dp"
-        android:layout_height="107dp"
-        android:layout_alignBottom="@+id/img1"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="115dp"
+        android:layout_width="85dp"
+        android:layout_height="84dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="193dp"
+        android:layout_marginBottom="100dp"
         app:srcCompat="@drawable/d1" />
 
+    <TextView
+        android:id="@+id/word1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/ex1"
+        android:layout_marginRight="281dp"
+        android:text="ff"
+        android:textSize="35dp" />
 
+    <TextView
+        android:id="@+id/word2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/word1"
+        android:layout_alignTop="@+id/ex2"
+        android:text="Hello "
+        android:textSize="35dp" />
 
+    <TextView
+        android:id="@+id/word3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/word1"
+        android:layout_alignTop="@+id/ex3"
+        android:text="World!"
+        android:textSize="35dp" />
 
 
 </RelativeLayout>

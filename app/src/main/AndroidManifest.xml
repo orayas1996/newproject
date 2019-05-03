@@ -46,8 +46,9 @@
             android:screenOrientation="landscape" />
         <activity
             android:name=".teacher"
-            android:screenOrientation="landscape"></activity>
-        <activity android:name=".Score"></activity>
+            android:screenOrientation="landscape" />
+        <activity android:name=".Score" />
+        <activity android:name=".teach_kod"></activity>
     </application>
 
 </manifest>
