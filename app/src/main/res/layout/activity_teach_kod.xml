@@ -5,16 +5,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".teach_kod">
+    tools:context=".teach_kod"
+    android:background="@color/colorbg6">
 
 
     <TextView
         android:id="@+id/Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:layout_marginEnd="344dp"
-        android:layout_marginRight="344dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="388dp"
+        android:layout_marginRight="388dp"
         android:text="มาตรา แม่กด"
         android:textSize="40dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
@@ -22,205 +23,135 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="629dp"
-        android:layout_height="65dp"
-        android:layout_marginBottom="360dp"
+        android:layout_width="667dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="368dp"
         android:layout_marginEnd="164dp"
         android:layout_marginRight="164dp"
-        android:background="@color/colorbg1"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
 
-        <TextView
+        <Button
             android:id="@+id/iv11"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginRight="20dp"
-            android:background="@color/colorAccent"
+            style="@style/btn"
             android:text="ด"
-            android:textAlignment="center"
-            android:textSize="40dp" />
+            android:textAlignment="center" />
 
-        <TextView
+        <Button
             android:id="@+id/iv12"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginRight="20dp"
-            android:background="@color/colorAccent"
+            style="@style/btn"
             android:text="จ"
-            android:textAlignment="center"
-            android:textSize="40dp" />
+            android:textAlignment="center" />
 
-        <TextView
+        <Button
             android:id="@+id/iv13"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginRight="20dp"
-            android:background="@color/colorAccent"
+            style="@style/btn"
             android:text="ช"
-            android:textAlignment="center"
-            android:textSize="40dp" />
+            android:textAlignment="center" />
 
-        <TextView
+        <Button
             android:id="@+id/iv14"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginRight="20dp"
-            android:background="@color/colorAccent"
+            style="@style/btn"
             android:text="ซ"
-            android:textAlignment="center"
-            android:textSize="40dp" />
+            android:textAlignment="center" />
 
-        <TextView
+        <Button
             android:id="@+id/iv15"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginRight="20dp"
-            android:background="@color/colorAccent"
+            style="@style/btn"
             android:text="ฎ"
-            android:textAlignment="center"
-            android:textSize="40dp" />
+            android:textAlignment="center" />
 
-        <TextView
+        <Button
             android:id="@+id/iv16"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginRight="20dp"
-            android:background="@color/colorAccent"
+            style="@style/btn"
             android:text="ฐ"
-            android:textAlignment="center"
-            android:textSize="40dp" />
+            android:textAlignment="center" />
 
-        <TextView
+        <Button
             android:id="@+id/iv17"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginRight="20dp"
-            android:background="@color/colorAccent"
+            style="@style/btn"
             android:text="ฏ"
-            android:textAlignment="center"
-            android:textSize="40dp" />
+            android:textAlignment="center" />
 
-        <TextView
+        <Button
             android:id="@+id/iv18"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginRight="20dp"
-            android:background="@color/colorAccent"
+            style="@style/btn"
             android:text="ฑ"
-            android:textAlignment="center"
-            android:textSize="40dp" />
+            android:textAlignment="center" />
 
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="629dp"
-        android:layout_height="64dp"
+        android:layout_width="667dp"
+        android:layout_height="76dp"
         android:layout_marginBottom="196dp"
         android:layout_marginEnd="164dp"
         android:layout_marginRight="164dp"
         android:layout_marginTop="8dp"
         android:orientation="horizontal"
-        android:background="@color/colorbg1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Title"
-        app:layout_constraintVertical_bias="0.512">
+        app:layout_constraintVertical_bias="0.525">
 
 
-        <TextView
+        <Button
             android:id="@+id/iv21"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginRight="20dp"
-            android:background="@color/colorAccent"
+            style="@style/btn"
             android:text="ฒ"
-            android:textAlignment="center"
-            android:textSize="40dp" />
+            android:textAlignment="center" />
 
-        <TextView
+        <Button
             android:id="@+id/iv22"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginRight="20dp"
-            android:background="@color/colorAccent"
+            style="@style/btn"
             android:text="ต"
-            android:textAlignment="center"
-            android:textSize="40dp" />
+            android:textAlignment="center" />
 
-        <TextView
+        <Button
             android:id="@+id/iv23"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginRight="20dp"
-            android:background="@color/colorAccent"
+            style="@style/btn"
             android:text="ถ"
-            android:textAlignment="center"
-            android:textSize="40dp" />
+            android:textAlignment="center" />
 
-        <TextView
+        <Button
             android:id="@+id/iv24"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginRight="20dp"
-            android:background="@color/colorAccent"
+            style="@style/btn"
             android:text="ท"
-            android:textAlignment="center"
-            android:textSize="40dp" />
+            android:textAlignment="center" />
 
-        <TextView
+        <Button
             android:id="@+id/iv25"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginRight="20dp"
-            android:background="@color/colorAccent"
+            style="@style/btn"
             android:text="ธ"
-            android:textAlignment="center"
-            android:textSize="40dp" />
+            android:textAlignment="center" />
 
-        <TextView
+        <Button
             android:id="@+id/iv26"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginRight="20dp"
-            android:background="@color/colorAccent"
+            style="@style/btn"
             android:text="ศ"
-            android:textAlignment="center"
-            android:textSize="40dp" />
+            android:textAlignment="center" />
 
-        <TextView
+        <Button
             android:id="@+id/iv27"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginRight="20dp"
-            android:background="@color/colorAccent"
+            style="@style/btn"
             android:text="ษ"
-            android:textAlignment="center"
-            android:textSize="40dp" />
+            android:textAlignment="center" />
 
-        <TextView
+        <Button
             android:id="@+id/iv28"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginRight="20dp"
-            android:background="@color/colorAccent"
+            style="@style/btn"
             android:text="ส"
-            android:textAlignment="center"
-            android:textSize="40dp" />
+            android:textAlignment="center" />
 
     </LinearLayout>
 
     <RelativeLayout
-        android:layout_width="532dp"
-        android:layout_height="226dp"
-        android:layout_marginBottom="40dp"
-        android:layout_marginLeft="212dp"
-        android:layout_marginStart="212dp"
-        android:background="@color/colorbg2"
+        android:id="@+id/boxx"
+        style="@style/box"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
@@ -229,27 +160,80 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:layout_below="@+id/bb"
+            android:layout_alignParentTop="true"
             android:layout_marginLeft="37dp"
+            android:layout_marginTop="31dp"
             android:text="ตัวอย่าง"
             android:textSize="20dp" />
 
         <TextView
             android:id="@+id/bb"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
             android:gravity="center"
             android:text="ด เด็ก"
             android:textSize="32dp" />
 
         <ImageView
             android:id="@+id/imageView1"
-            android:layout_width="82dp"
+            android:layout_width="81dp"
             android:layout_height="67dp"
             android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
+            android:layout_alignParentTop="true"
             android:layout_marginLeft="29dp"
+            android:layout_marginTop="66dp"
             app:srcCompat="@drawable/d2" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="82dp"
+            android:layout_height="67dp"
+            android:layout_alignTop="@+id/imageView1"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/d1" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="82dp"
+            android:layout_height="67dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/imageView1"
+            android:layout_marginRight="64dp"
+            app:srcCompat="@drawable/d3" />
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="119dp"
+            android:layout_height="72dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/imageView1"
+            android:layout_marginLeft="21dp"
+            android:text="TextView"
+            android:textSize="25dp"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="119dp"
+            android:layout_height="72dp"
+            android:layout_below="@+id/imageView1"
+            android:layout_centerHorizontal="true"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/text3"
+            android:layout_width="119dp"
+            android:layout_height="72dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/imageView1"
+            android:layout_marginRight="43dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textSize="25dp" />
+
 
 
     </RelativeLayout>
