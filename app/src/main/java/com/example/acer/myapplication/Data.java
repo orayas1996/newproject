@@ -43,8 +43,11 @@ public class Data extends AppCompatActivity {
 
         //get user id
         final String id_user = getIntent().getExtras().getString("id");
+        //get name form teacher
+        final String name = getIntent().getExtras().getString("pos");
 
-        DatabaseReference myRef2 = database.getReference("Users").child(id_user).child("score1");
+
+        DatabaseReference myRef2 = database.getReference("Users").child(name);
 
 
         mlistv = (ListView) findViewById(R.id.listview);
@@ -56,11 +59,28 @@ public class Data extends AppCompatActivity {
         myRef2.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-                long value = dataSnapshot.getValue(long.class);
-                Log.d("fff","id is "+ id_user);
-                Log.d("fff","value is "+ value);
-                score.add(value);
-                arrayAdapter.notifyDataSetChanged();
+                for( DataSnapshot namesnap : dataSnapshot.getChildren()) {
+
+                    long sc = namesnap.child("score1").getValue(Long.class);
+//                    String value = namesnap.child(name).getValue(String.class);
+//                    Log.d("aaa","value =" + value);
+//                    if(value == name){
+//                        long sc = namesnap.child("score1").getValue(long.class);
+                    Log.d("ccc","score = "+ sc);
+                    score.add(sc);
+
+
+//                    }
+//                    String value = dataSnapshot.getValue(String.class);
+//                    Log.d("fff", "value is " + value);
+                    arrayAdapter.notifyDataSetChanged();
+
+                }
+//                long value = dataSnapshot.getValue(long.class);
+//                Log.d("fff","id is "+ id_user);
+//                Log.d("fff","value is "+ value);
+//                score.add(value);
+//                arrayAdapter.notifyDataSetChanged();
 
             }
 

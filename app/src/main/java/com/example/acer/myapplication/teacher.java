@@ -54,10 +54,8 @@ public class teacher extends AppCompatActivity {
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
                 for( DataSnapshot namesnap : dataSnapshot.getChildren()) {
 //                    Log.v("mmm",""+ namesnap.child("name").getKey()); //displays the key for the node
-                    String value = namesnap.child("name").getValue(String.class);
-                    String id = namesnap.child("id").getValue(String.class);
-                    Log.d("tm",""+ id);
-                    Log.d("tmz",""+ value);
+                    String value = namesnap.getKey();
+                    Log.d("mmm",""+ value);
                     if(value != null){
                     name.add(value);
                   }
@@ -93,8 +91,10 @@ public class teacher extends AppCompatActivity {
         namelist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String pos = parent.getItemAtPosition(position).toString();
+                Log.d("ss","pos ="+ pos);
                 Intent i = new Intent(teacher.this,Data.class);
-                i.putExtra("id",userId);
+                i.putExtra("pos",pos);
                 startActivity(i);
 
 
