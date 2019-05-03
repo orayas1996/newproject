@@ -2,12 +2,31 @@ package com.example.acer.myapplication;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Layout;
+import android.view.View;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class teach_kod extends AppCompatActivity {
+
+
+    TextView title,iv11;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teach_kod);
+
+        final TextView title = (TextView) findViewById(R.id.Title);
+        TextView iv11 = (TextView) findViewById(R.id.iv11);
+
+        iv11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                title.setText("ด.เด็ก");
+            }
+        });
+
     }
 }
