@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".login"
+            android:name=".teach_kod"
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -48,7 +48,7 @@
             android:name=".teacher"
             android:screenOrientation="landscape" />
         <activity android:name=".Score" />
-        <activity android:name=".teach_kod" android:screenOrientation="landscape"></activity>
+        <activity android:name=".login" android:screenOrientation="landscape"></activity>
     </application>
 
 </manifest>

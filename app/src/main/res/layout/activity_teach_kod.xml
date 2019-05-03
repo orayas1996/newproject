@@ -8,58 +8,253 @@
     tools:context=".teach_kod">
 
 
-
-
     <TextView
         android:id="@+id/Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="336dp"
-        android:layout_marginRight="336dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="344dp"
+        android:layout_marginRight="344dp"
         android:text="มาตรา แม่กด"
-        android:textSize="50dp"
+        android:textSize="40dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="739dp"
-        android:layout_height="386dp"
-        android:layout_marginBottom="24dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginRight="100dp"
-        android:orientation="vertical"
+        android:layout_width="629dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="360dp"
+        android:layout_marginEnd="164dp"
+        android:layout_marginRight="164dp"
+        android:background="@color/colorbg1"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
 
-        <LinearLayout
-            android:id="@+id/img"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="2"
-            android:orientation="horizontal"
-            android:weightSum="4">
+        <TextView
+            android:id="@+id/iv11"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/colorAccent"
+            android:text="ด"
+            android:textAlignment="center"
+            android:textSize="40dp" />
 
+        <TextView
+            android:id="@+id/iv12"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/colorAccent"
+            android:text="จ"
+            android:textAlignment="center"
+            android:textSize="40dp" />
 
-            <TextView
-                android:id="@+id/iv11"
-                android:layout_width="107dp"
-                android:layout_height="match_parent"
-                android:layout_marginRight="100dp"
-                android:background="@color/colorAccent"
-                android:text="ด"
-                android:textAlignment="center"
-                android:textSize="60dp" />
+        <TextView
+            android:id="@+id/iv13"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/colorAccent"
+            android:text="ช"
+            android:textAlignment="center"
+            android:textSize="40dp" />
 
+        <TextView
+            android:id="@+id/iv14"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/colorAccent"
+            android:text="ซ"
+            android:textAlignment="center"
+            android:textSize="40dp" />
 
+        <TextView
+            android:id="@+id/iv15"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/colorAccent"
+            android:text="ฎ"
+            android:textAlignment="center"
+            android:textSize="40dp" />
 
-        </LinearLayout>
+        <TextView
+            android:id="@+id/iv16"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/colorAccent"
+            android:text="ฐ"
+            android:textAlignment="center"
+            android:textSize="40dp" />
 
+        <TextView
+            android:id="@+id/iv17"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/colorAccent"
+            android:text="ฏ"
+            android:textAlignment="center"
+            android:textSize="40dp" />
 
+        <TextView
+            android:id="@+id/iv18"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/colorAccent"
+            android:text="ฑ"
+            android:textAlignment="center"
+            android:textSize="40dp" />
 
 
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="629dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="196dp"
+        android:layout_marginEnd="164dp"
+        android:layout_marginRight="164dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:background="@color/colorbg1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Title"
+        app:layout_constraintVertical_bias="0.512">
+
+
+        <TextView
+            android:id="@+id/iv21"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/colorAccent"
+            android:text="ฒ"
+            android:textAlignment="center"
+            android:textSize="40dp" />
+
+        <TextView
+            android:id="@+id/iv22"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/colorAccent"
+            android:text="ต"
+            android:textAlignment="center"
+            android:textSize="40dp" />
+
+        <TextView
+            android:id="@+id/iv23"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/colorAccent"
+            android:text="ถ"
+            android:textAlignment="center"
+            android:textSize="40dp" />
+
+        <TextView
+            android:id="@+id/iv24"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/colorAccent"
+            android:text="ท"
+            android:textAlignment="center"
+            android:textSize="40dp" />
+
+        <TextView
+            android:id="@+id/iv25"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/colorAccent"
+            android:text="ธ"
+            android:textAlignment="center"
+            android:textSize="40dp" />
+
+        <TextView
+            android:id="@+id/iv26"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/colorAccent"
+            android:text="ศ"
+            android:textAlignment="center"
+            android:textSize="40dp" />
+
+        <TextView
+            android:id="@+id/iv27"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/colorAccent"
+            android:text="ษ"
+            android:textAlignment="center"
+            android:textSize="40dp" />
+
+        <TextView
+            android:id="@+id/iv28"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/colorAccent"
+            android:text="ส"
+            android:textAlignment="center"
+            android:textSize="40dp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="532dp"
+        android:layout_height="226dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="212dp"
+        android:layout_marginStart="212dp"
+        android:background="@color/colorbg2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/ex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/bb"
+            android:layout_marginLeft="37dp"
+            android:text="ตัวอย่าง"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/bb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="ด เด็ก"
+            android:textSize="32dp" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="82dp"
+            android:layout_height="67dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="29dp"
+            app:srcCompat="@drawable/d2" />
+
+
+    </RelativeLayout>
+
+
+
+
 </android.support.constraint.ConstraintLayout>
