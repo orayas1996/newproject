@@ -21,9 +21,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:screenOrientation="landscape" />
-        <activity
             android:name=".menu"
             android:screenOrientation="landscape" />
         <activity
@@ -39,16 +36,18 @@
             android:name=".Reg"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".User"
-            android:screenOrientation="landscape" />
-        <activity
             android:name=".Data"
             android:screenOrientation="landscape" />
         <activity
             android:name=".teacher"
             android:screenOrientation="landscape" />
-        <activity android:name=".Score" />
-        <activity android:name=".login" android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Score"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".login"
+            android:screenOrientation="landscape" />
+        <activity android:name=".teach_kob"></activity>
     </application>
 
 </manifest>

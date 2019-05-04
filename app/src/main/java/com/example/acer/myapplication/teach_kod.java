@@ -1,5 +1,6 @@
 package com.example.acer.myapplication;
 
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Layout;
@@ -13,8 +14,8 @@ import org.w3c.dom.Text;
 public class teach_kod extends AppCompatActivity {
 
 
-    TextView title,bb,ex,tx1,tx2,tx3;
-    Button iv11,iv12,iv13,iv14,iv15,iv16,iv17,iv18,iv21,iv22,iv23,iv24,iv25,iv26,iv27,iv28;
+    TextView title,bb,tx1,tx2,tx3;
+    Button iv11,iv12,iv13,iv14,iv15,iv16,iv17,iv18,iv21,iv22,iv23,iv24,iv25,iv26,iv27,iv28,b1,b2,b3;
     ImageView view1,view2,view3;
 
     @Override
@@ -28,7 +29,7 @@ public class teach_kod extends AppCompatActivity {
 
         final TextView title = (TextView) findViewById(R.id.Title);
         final TextView bb = (TextView) findViewById(R.id.bb);
-        TextView ex = (TextView) findViewById(R.id.ex);
+
         TextView tx1 = (TextView) findViewById(R.id.text1);
         TextView tx2 = (TextView) findViewById(R.id.text2);
         TextView tx3 = (TextView) findViewById(R.id.text3);
@@ -48,6 +49,25 @@ public class teach_kod extends AppCompatActivity {
         Button iv26 = ( Button) findViewById(R.id.iv26);
         Button iv27 = ( Button) findViewById(R.id.iv27);
         Button iv28 = ( Button) findViewById(R.id.iv28);
+        Button b1 = ( Button) findViewById(R.id.but1);
+        Button b2 = ( Button) findViewById(R.id.but2);
+        Button b3 = ( Button) findViewById(R.id.but3);
+
+        final MediaPlayer d = MediaPlayer.create(this,R.raw.d);
+        final MediaPlayer j = MediaPlayer.create(this,R.raw.j);
+        final MediaPlayer ch = MediaPlayer.create(this,R.raw.ch);
+        final MediaPlayer dd = MediaPlayer.create(this,R.raw.dd);
+        final MediaPlayer zh = MediaPlayer.create(this,R.raw.zh);
+//        final MediaPlayer rsee = MediaPlayer.create(this,R.raw.rsee);
+//        final MediaPlayer sala = MediaPlayer.create(this,R.raw.sala);
+//        final MediaPlayer sor = MediaPlayer.create(this,R.raw.sor);
+//        final MediaPlayer t = MediaPlayer.create(this,R.raw.t);
+//        final MediaPlayer tahan = MediaPlayer.create(this,R.raw.tahan);
+//        final MediaPlayer tong = MediaPlayer.create(this,R.raw.tong);
+//        final MediaPlayer tormon = MediaPlayer.create(this,R.raw.tormon);
+
+
+
 
 
         iv11.setOnClickListener(new View.OnClickListener() {
@@ -55,6 +75,7 @@ public class teach_kod extends AppCompatActivity {
             public void onClick(View v) {
                 bb.setText("ด.เด็ก");
                 view1.setImageResource(R.drawable.b1);
+                d.start();
 
 
             }
@@ -65,6 +86,7 @@ public class teach_kod extends AppCompatActivity {
             public void onClick(View v) {
                 bb.setText("จ.จาน");
                 view1.setImageResource(R.drawable.b2);
+                j.start();
 
             }
         });
@@ -73,6 +95,7 @@ public class teach_kod extends AppCompatActivity {
             public void onClick(View v) {
                 bb.setText("ช.ช้าง");
                 view1.setImageResource(R.drawable.b3);
+                ch.start();
 
             }
         });
@@ -82,6 +105,8 @@ public class teach_kod extends AppCompatActivity {
             public void onClick(View v) {
                 bb.setText("ซ.โซ่");
                 view1.setImageResource(R.drawable.b33);
+                zh.start();
+
 
             }
         });
@@ -90,6 +115,7 @@ public class teach_kod extends AppCompatActivity {
             public void onClick(View v) {
                 bb.setText("ฎ.ชฎา");
                 view1.setImageResource(R.drawable.bb);
+                dd.start();
 
             }
         });
