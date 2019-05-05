@@ -41,7 +41,6 @@ public class match_two extends AppCompatActivity {
 
         chronometer = findViewById(R.id.chronometer);
         Button btn = (Button) findViewById(R.id.butlevel);
-        final Button btn_s = (Button) findViewById(R.id.start);
 
 
         iv11 = (ImageView) findViewById(R.id.iv11);
@@ -62,18 +61,10 @@ public class match_two extends AppCompatActivity {
         iv23.setTag("6");
         iv24.setTag("7");
 
-        btn_s.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                time();
-                btn_s.setVisibility(View.INVISIBLE);
-            }
-
-        });
 
 
-
-        chronometer.setVisibility(View.INVISIBLE);
+        time();
+//        chronometer.setVisibility(View.INVISIBLE);
         frontofCardResources();
 
         Collections.shuffle(Arrays.asList(cardsarray));

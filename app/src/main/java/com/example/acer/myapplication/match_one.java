@@ -26,7 +26,7 @@ import java.util.Collections;
 
 public class match_one extends AppCompatActivity {
 
-    ImageView iv11, iv12, iv13, iv21, iv22, iv23;
+    ImageView iv11, iv12, iv13, iv21, iv22, iv23,st,pause;
     Integer[] cardsarray = {101, 102, 103, 201, 202, 203};
     private Chronometer chronometer;
     private boolean running;

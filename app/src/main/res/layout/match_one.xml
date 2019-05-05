@@ -9,6 +9,14 @@
     android:orientation="horizontal"
     android:background="@drawable/sky">
 
+    <TextView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:text="เวลา:"
+        android:textSize="50dp"
+        android:layout_marginLeft="25dp"
+        android:textColor="#000"/>
+
 
     <Chronometer
         android:id="@+id/chronometer"
@@ -16,8 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="26dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginLeft="142dp"
         android:textSize="50dp" />
 
 
