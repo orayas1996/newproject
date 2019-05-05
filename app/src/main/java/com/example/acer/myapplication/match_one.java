@@ -51,7 +51,6 @@ public class match_one extends AppCompatActivity {
 
         chronometer = findViewById(R.id.chronometer);
         Button btn = (Button) findViewById(R.id.butlevel);
-        final Button btn_s = (Button) findViewById(R.id.start);
 
 
         iv11 = (ImageView) findViewById(R.id.iv11);
@@ -68,15 +67,7 @@ public class match_one extends AppCompatActivity {
         iv22.setTag("4");
         iv23.setTag("5");
 
-        btn_s.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                time();
-                btn_s.setVisibility(View.INVISIBLE);
-            }
-
-        });
-
+        time();
         chronometer.setVisibility(View.INVISIBLE);
         frontoCardResources();
         Collections.shuffle(Arrays.asList(cardsarray));

@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".teach_kob"
-    android:background="@color/colorbg6">
+    tools:context=".teach_kon">
+
     <TextView
         android:id="@+id/Title"
         android:layout_width="220dp"
@@ -13,19 +13,18 @@
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="384dp"
         android:layout_marginRight="384dp"
-        android:textColor="#060101"
-        android:text="มาตรา แม่กบ"
+        android:text="มาตรา แม่กน"
         android:textSize="40dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="614dp"
-        android:layout_height="84dp"
-        android:layout_marginBottom="348dp"
-        android:layout_marginEnd="152dp"
-        android:layout_marginRight="152dp"
+        android:layout_width="627dp"
+        android:layout_height="96dp"
+        android:layout_marginBottom="344dp"
+        android:layout_marginEnd="156dp"
+        android:layout_marginRight="156dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -34,41 +33,49 @@
         <Button
             android:id="@+id/iv11"
             style="@style/btn"
-            android:layout_width="78dp"
-            android:layout_height="match_parent"
-            android:text="บ"
+            android:layout_width="wrap_content"
+            android:layout_height="77dp"
+            android:text="น"
             android:textAlignment="center" />
 
         <Button
             android:id="@+id/iv12"
             style="@style/btn"
-            android:layout_width="78dp"
-            android:layout_height="match_parent"
-            android:text="ป"
+            android:layout_width="wrap_content"
+            android:layout_height="77dp"
+            android:text="ญ"
             android:textAlignment="center" />
 
         <Button
             android:id="@+id/iv13"
             style="@style/btn"
-            android:layout_width="78dp"
-            android:layout_height="match_parent"
-            android:text="พ"
+            android:layout_width="wrap_content"
+            android:layout_height="77dp"
+            android:text="ณ"
             android:textAlignment="center" />
 
         <Button
             android:id="@+id/iv14"
             style="@style/btn"
-            android:layout_width="78dp"
-            android:layout_height="match_parent"
-            android:text="ฟ"
+            android:layout_width="wrap_content"
+            android:layout_height="77dp"
+            android:text="ร"
             android:textAlignment="center" />
 
         <Button
             android:id="@+id/iv15"
             style="@style/btn"
-            android:layout_width="78dp"
-            android:layout_height="match_parent"
-            android:text="ภ"
+            android:layout_width="wrap_content"
+            android:layout_height="77dp"
+            android:text="ล"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/iv16"
+            style="@style/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="77dp"
+            android:text="ฬ"
             android:textAlignment="center" />
     </LinearLayout>
 
@@ -77,7 +84,7 @@
         style="@style/box"
         android:layout_width="776dp"
         android:layout_height="278dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="52dp"
         android:layout_marginLeft="92dp"
         android:layout_marginStart="92dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -89,7 +96,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:gravity="center"
-            android:text="บ ใบไม้"
+            android:text="ด เด็ก"
             android:textColor="#050101"
             android:textSize="40dp" />
 
@@ -100,7 +107,7 @@
             android:layout_alignParentLeft="true"
             android:layout_below="@+id/bb"
             android:layout_marginLeft="67dp"
-            app:srcCompat="@drawable/b1" />
+            app:srcCompat="@drawable/d2" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -108,7 +115,7 @@
             android:layout_height="120dp"
             android:layout_alignTop="@+id/imageView1"
             android:layout_centerHorizontal="true"
-            app:srcCompat="@drawable/b2" />
+            app:srcCompat="@drawable/d1" />
 
         <ImageView
             android:id="@+id/imageView3"
@@ -117,7 +124,7 @@
             android:layout_alignParentRight="true"
             android:layout_below="@+id/bb"
             android:layout_marginRight="68dp"
-            app:srcCompat="@drawable/b3" />
+            app:srcCompat="@drawable/d33" />
 
         <TextView
             android:id="@+id/text1"
@@ -126,7 +133,7 @@
             android:layout_alignParentLeft="true"
             android:layout_below="@+id/imageView1"
             android:layout_marginLeft="30dp"
-            android:text=""
+            android:text="(แค - หรอด)"
             android:textAlignment="center" />
 
         <TextView
@@ -135,7 +142,7 @@
             android:layout_width="wrap_content"
             android:layout_below="@+id/imageView1"
             android:layout_centerHorizontal="true"
-            android:text=""
+            android:text="(รด)"
             android:textAlignment="center" />
 
         <TextView
@@ -145,7 +152,7 @@
             android:layout_alignParentRight="true"
             android:layout_alignTop="@+id/text1"
             android:layout_marginRight="60dp"
-            android:text=""
+            android:text="(กะ - สัด)"
             android:textAlignment="center" />
 
         <Button

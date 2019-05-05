@@ -53,11 +53,11 @@ public class teach_kod extends AppCompatActivity {
         Button b2 = ( Button) findViewById(R.id.but2);
         Button b3 = ( Button) findViewById(R.id.but3);
 
-        final MediaPlayer d = MediaPlayer.create(this,R.raw.d);
-        final MediaPlayer j = MediaPlayer.create(this,R.raw.j);
-        final MediaPlayer ch = MediaPlayer.create(this,R.raw.ch);
-        final MediaPlayer dd = MediaPlayer.create(this,R.raw.dd);
-        final MediaPlayer zh = MediaPlayer.create(this,R.raw.zh);
+//        final MediaPlayer d = MediaPlayer.create(this,R.raw.d);
+//        final MediaPlayer j = MediaPlayer.create(this,R.raw.j);
+//        final MediaPlayer ch = MediaPlayer.create(this,R.raw.ch);
+//        final MediaPlayer dd = MediaPlayer.create(this,R.raw.dd);
+//        final MediaPlayer zh = MediaPlayer.create(this,R.raw.zh);
 //        final MediaPlayer rsee = MediaPlayer.create(this,R.raw.rsee);
 //        final MediaPlayer sala = MediaPlayer.create(this,R.raw.sala);
 //        final MediaPlayer sor = MediaPlayer.create(this,R.raw.sor);
@@ -75,7 +75,7 @@ public class teach_kod extends AppCompatActivity {
             public void onClick(View v) {
                 bb.setText("ด.เด็ก");
                 view1.setImageResource(R.drawable.b1);
-                d.start();
+//                d.start();
 
 
             }
@@ -86,7 +86,7 @@ public class teach_kod extends AppCompatActivity {
             public void onClick(View v) {
                 bb.setText("จ.จาน");
                 view1.setImageResource(R.drawable.b2);
-                j.start();
+//                j.start();
 
             }
         });
@@ -95,7 +95,7 @@ public class teach_kod extends AppCompatActivity {
             public void onClick(View v) {
                 bb.setText("ช.ช้าง");
                 view1.setImageResource(R.drawable.b3);
-                ch.start();
+//                ch.start();
 
             }
         });
@@ -105,7 +105,7 @@ public class teach_kod extends AppCompatActivity {
             public void onClick(View v) {
                 bb.setText("ซ.โซ่");
                 view1.setImageResource(R.drawable.b33);
-                zh.start();
+//                zh.start();
 
 
             }
@@ -115,7 +115,7 @@ public class teach_kod extends AppCompatActivity {
             public void onClick(View v) {
                 bb.setText("ฎ.ชฎา");
                 view1.setImageResource(R.drawable.bb);
-                dd.start();
+//                dd.start();
 
             }
         });

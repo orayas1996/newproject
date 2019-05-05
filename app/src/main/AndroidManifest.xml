@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".teach_kod"
+            android:name=".match_t"
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,7 +27,7 @@
             android:name=".match_two"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".match_t"
+            android:name=".teach_kod"
             android:screenOrientation="landscape" />
         <activity
             android:name=".match_one"
@@ -47,7 +47,13 @@
         <activity
             android:name=".login"
             android:screenOrientation="landscape" />
-        <activity android:name=".teach_kob"></activity>
+        <activity android:name=".teach_kob"   android:screenOrientation="landscape" />
+        <activity android:name=".teach_kok"   android:screenOrientation="landscape" />
+        <activity android:name=".teach_kom"   android:screenOrientation="landscape" />
+        <activity android:name=".teach_kon"   android:screenOrientation="landscape" />
+        <activity android:name=".teach_kong"  android:screenOrientation="landscape"  />
+        <activity android:name=".teach_kaow"   android:screenOrientation="landscape" />
+        <activity android:name=".teach_kia"  android:screenOrientation="landscape" ></activity>
     </application>
 
 </manifest>

@@ -35,8 +35,16 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">35dp</item>
         <item name="android:textColor">#060101</item>
+    </style>
 
 
+    <style name="but" parent="@style/Theme.AppCompat">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:text">กดเพื่อฟังเสียง</item>
+        <item name="android:textColor">#060101</item>
+        <item name="android:background">@drawable/but</item>
     </style>
 
 

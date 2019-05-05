@@ -227,30 +227,25 @@
 
         <Button
             android:id="@+id/but1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignRight="@+id/imageView1"
-            android:layout_below="@+id/text1"
-            android:text="กดเพื่อฟังเสียง"
-            android:textSize="20dp"/>
+            style="@style/but"
+            android:layout_alignBottom="@+id/but2"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="47dp"
+            />
 
         <Button
+            style="@style/but"
             android:id="@+id/but2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_below="@+id/text1"
             android:layout_centerHorizontal="true"
-            android:text="กดเพื่อฟังเสียง"
-            android:textSize="20dp"/>
+            />
 
         <Button
+            style="@style/but"
             android:id="@+id/but3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_alignRight="@+id/imageView3"
             android:layout_below="@+id/text1"
-            android:text="กดเพื่อฟังเสียง"
-            android:textSize="20dp"/>
+            />
 
 
     </RelativeLayout>

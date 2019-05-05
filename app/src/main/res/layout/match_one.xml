@@ -1,58 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:weightSum="4"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:background="@drawable/sky">
 
 
-    <RelativeLayout
-        android:layout_width="189dp"
-        android:layout_height="458dp"
-        android:layout_marginLeft="38dp"
-        android:layout_marginTop="35dp"
-        android:background="@color/colorAccent"
-        android:orientation="vertical">
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="16dp"
+        android:textSize="50dp" />
 
-        <Button
-            android:id="@+id/start"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="42dp"
-            android:text="เริ่มเกมส์"
-            android:textSize="32dp" />
-
-        <!--<TextView-->
-            <!--android:id="@+id/time"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_alignParentTop="true"-->
-            <!--android:layout_centerHorizontal="true"-->
-            <!--android:layout_marginTop="131dp"-->
-            <!--android:text=""-->
-            <!--android:textSize="100dp" />-->
-
-        <Chronometer
-            android:id="@+id/chronometer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="165dp"
-            android:textSize="50dp" />
-
-    </RelativeLayout>
 
     <LinearLayout
-        android:layout_width="591dp"
-        android:layout_height="458dp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="35dp"
+        android:layout_width="579dp"
+        android:layout_height="416dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="192dp"
+        android:layout_marginTop="72dp"
         android:background="@color/colorPrimary"
         android:orientation="vertical">
 
@@ -136,4 +111,24 @@
 
     </LinearLayout>
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/pause"
+        android:background="@color/colorbg3"
+        android:layout_width="60dp"
+        android:layout_height="61dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/chronometer"
+        android:layout_marginRight="98dp"
+        app:srcCompat="@android:drawable/ic_media_pause" />
+
+    <ImageView
+        android:id="@+id/sound"
+        android:background="@color/colorbg3"
+        android:layout_width="54dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/chronometer"
+        android:layout_marginRight="37dp"
+        app:srcCompat="@android:drawable/ic_lock_silent_mode_off" />
+
+</RelativeLayout>

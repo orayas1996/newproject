@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".teach_kob"
+    tools:context=".teach_kom"
     android:background="@color/colorbg6">
     <TextView
         android:id="@+id/Title"
@@ -14,18 +14,18 @@
         android:layout_marginEnd="384dp"
         android:layout_marginRight="384dp"
         android:textColor="#060101"
-        android:text="มาตรา แม่กบ"
+        android:text="มาตรา แม่กก"
         android:textSize="40dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="614dp"
-        android:layout_height="84dp"
-        android:layout_marginBottom="348dp"
-        android:layout_marginEnd="152dp"
-        android:layout_marginRight="152dp"
+        android:layout_width="90dp"
+        android:layout_height="85dp"
+        android:layout_marginBottom="344dp"
+        android:layout_marginEnd="436dp"
+        android:layout_marginRight="436dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -36,39 +36,7 @@
             style="@style/btn"
             android:layout_width="78dp"
             android:layout_height="match_parent"
-            android:text="บ"
-            android:textAlignment="center" />
-
-        <Button
-            android:id="@+id/iv12"
-            style="@style/btn"
-            android:layout_width="78dp"
-            android:layout_height="match_parent"
-            android:text="ป"
-            android:textAlignment="center" />
-
-        <Button
-            android:id="@+id/iv13"
-            style="@style/btn"
-            android:layout_width="78dp"
-            android:layout_height="match_parent"
-            android:text="พ"
-            android:textAlignment="center" />
-
-        <Button
-            android:id="@+id/iv14"
-            style="@style/btn"
-            android:layout_width="78dp"
-            android:layout_height="match_parent"
-            android:text="ฟ"
-            android:textAlignment="center" />
-
-        <Button
-            android:id="@+id/iv15"
-            style="@style/btn"
-            android:layout_width="78dp"
-            android:layout_height="match_parent"
-            android:text="ภ"
+            android:text="ม"
             android:textAlignment="center" />
     </LinearLayout>
 
@@ -89,7 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:gravity="center"
-            android:text="บ ใบไม้"
+            android:text="ม ม้า"
             android:textColor="#050101"
             android:textSize="40dp" />
 
@@ -100,7 +68,7 @@
             android:layout_alignParentLeft="true"
             android:layout_below="@+id/bb"
             android:layout_marginLeft="67dp"
-            app:srcCompat="@drawable/b1" />
+            app:srcCompat="@drawable/m" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -108,7 +76,7 @@
             android:layout_height="120dp"
             android:layout_alignTop="@+id/imageView1"
             android:layout_centerHorizontal="true"
-            app:srcCompat="@drawable/b2" />
+            app:srcCompat="@drawable/m1" />
 
         <ImageView
             android:id="@+id/imageView3"
@@ -117,7 +85,7 @@
             android:layout_alignParentRight="true"
             android:layout_below="@+id/bb"
             android:layout_marginRight="68dp"
-            app:srcCompat="@drawable/b3" />
+            app:srcCompat="@drawable/m" />
 
         <TextView
             android:id="@+id/text1"
