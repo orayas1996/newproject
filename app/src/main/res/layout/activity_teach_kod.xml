@@ -177,7 +177,7 @@
             android:layout_alignParentLeft="true"
             android:layout_below="@+id/bb"
             android:layout_marginLeft="67dp"
-            app:srcCompat="@drawable/d2" />
+            app:srcCompat="@drawable/d1" />
 
         <ImageView
             android:id="@+id/imageView2"
