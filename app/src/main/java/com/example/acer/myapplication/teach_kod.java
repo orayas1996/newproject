@@ -402,9 +402,9 @@ public class teach_kod extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 bb.setText("ธ. ธง");
-                view1.setImageResource(R.drawable.d_12);
-                view2.setImageResource(R.drawable.dd_12);
-                view3.setImageResource(R.drawable.ddd_12);
+                view1.setImageResource(R.drawable.ddd_12);
+                view2.setImageResource(R.drawable.d_12);
+                view3.setImageResource(R.drawable.dd_12);
                 tx1.setText("วัน - พุด");
                 tx2.setText("อา - วุด");
                 tx3.setText("โกรด");
