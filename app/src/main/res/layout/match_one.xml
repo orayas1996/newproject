@@ -120,22 +120,24 @@
 
     <ImageView
         android:id="@+id/pause"
-        android:background="@color/colorbg3"
         android:layout_width="60dp"
         android:layout_height="61dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/chronometer"
-        android:layout_marginRight="98dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="71dp"
+        android:layout_marginTop="106dp"
+        android:background="@color/colorbg3"
         app:srcCompat="@android:drawable/ic_media_pause" />
 
     <ImageView
-        android:id="@+id/sound"
+        android:id="@+id/start"
+        android:layout_width="60dp"
+        android:layout_height="61dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/pause"
+        android:layout_marginTop="195dp"
         android:background="@color/colorbg3"
-        android:layout_width="54dp"
-        android:layout_height="60dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/chronometer"
-        android:layout_marginRight="37dp"
-        app:srcCompat="@android:drawable/ic_lock_silent_mode_off" />
+        app:srcCompat="@android:drawable/ic_media_play" />
+
 
 </RelativeLayout>

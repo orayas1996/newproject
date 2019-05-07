@@ -30,7 +30,7 @@ public class match_one extends AppCompatActivity {
     Integer[] cardsarray = {101, 102, 103, 201, 202, 203};
     private Chronometer chronometer;
     private boolean running;
-    private long stop,correct_time;
+    private long stop,correct_time,pauseoffset;
 //    FirebaseDatabase database = FirebaseDatabase.getInstance();
 
 
@@ -52,7 +52,8 @@ public class match_one extends AppCompatActivity {
         chronometer = findViewById(R.id.chronometer);
         Button btn = (Button) findViewById(R.id.butlevel);
 
-
+        st = (ImageView) findViewById(R.id.start) ;
+        pause = (ImageView) findViewById(R.id.pause);
         iv11 = (ImageView) findViewById(R.id.iv11);
         iv12 = (ImageView) findViewById(R.id.iv12);
         iv13 = (ImageView) findViewById(R.id.iv13);
@@ -68,7 +69,7 @@ public class match_one extends AppCompatActivity {
         iv23.setTag("5");
 
         time();
-        chronometer.setVisibility(View.INVISIBLE);
+        pause.setVisibility(View.VISIBLE);
         frontoCardResources();
         Collections.shuffle(Arrays.asList(cardsarray));
 
@@ -120,20 +121,37 @@ public class match_one extends AppCompatActivity {
 
             }
         });
-
+        pause.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Pause();
+            }
+        });
+    st.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            time();
+        }
+    });
 
     }
 
     private void time() {
-
         chronometer.setVisibility(View.VISIBLE);
         if (!running) {
-            chronometer.setBase(SystemClock.elapsedRealtime());
+            chronometer.setBase(SystemClock.elapsedRealtime() - pauseoffset);
             chronometer.start();
             running = true;
         }
 
 
+    }
+    public void Pause(){
+        if(running){
+            chronometer.stop();
+            pauseoffset = SystemClock.elapsedRealtime() - chronometer.getBase();
+            running = false;
+        }
     }
 
     private void doStuff(ImageView iv, int card) {
