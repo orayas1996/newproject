@@ -85,9 +85,9 @@ public class teach_kod extends AppCompatActivity {
         final MediaPlayer rsee = MediaPlayer.create(this, R.raw.d_14);
         final MediaPlayer rsee2 = MediaPlayer.create(this, R.raw.dd_14);
         final MediaPlayer rsee3 = MediaPlayer.create(this, R.raw.ddd_14);
-//        final MediaPlayer s = MediaPlayer.create(this, R.raw.d_15);
-//        final MediaPlayer s2 = MediaPlayer.create(this, R.raw.dd_15);
-//        final MediaPlayer s3 = MediaPlayer.create(this, R.raw.ddd_15);
+        final MediaPlayer s = MediaPlayer.create(this, R.raw.d_15);
+        final MediaPlayer s2 = MediaPlayer.create(this, R.raw.dd_15);
+        final MediaPlayer s3 = MediaPlayer.create(this, R.raw.ddd_15);
         final MediaPlayer tan = MediaPlayer.create(this, R.raw.d_16);
 
         iv11.setOnClickListener(new View.OnClickListener() {
@@ -131,6 +131,7 @@ public class teach_kod extends AppCompatActivity {
                 tx1.setText("สม - เส็ด");
                 tx2.setText("ตำ - หรวด");
                 tx3.setText("ตรวด - งาน");
+
                 b1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -495,7 +496,7 @@ public class teach_kod extends AppCompatActivity {
             public void onClick(View v) {
                 bb.setText("ส. เสือ");
                 view1.setImageResource(R.drawable.dd_15);
-                view2.setImageResource(R.drawable.dd_15);
+                view2.setImageResource(R.drawable.d_15);
                 view3.setImageResource(R.drawable.ddd_15);
                 tx1.setText("ถัง - แก๊ด");
                 tx2.setText("สาด-สะ-หนา");
@@ -503,25 +504,65 @@ public class teach_kod extends AppCompatActivity {
                 b1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-
+                        s.start();
                     }
                 });
                 b2.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-
+                        s2.start();
                     }
                 });
                 b3.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-
+                        s3.start();
                     }
                 });
 
 
             }
         });
+//                s.stop();
+//                s2.stop();
+//                s3.stop();
+//                d.stop();
+//                d2.stop();
+//                d3.stop();
+//                 j.stop();
+//                 j2.stop();
+//                j3.stop();
+//             ch.stop();
+//                ch2.stop();
+//                 ch3.stop();
+//                zh.stop();
+//                 da.stop();
+//                da2.stop();
+//                 da3.stop();
+//                 tak.stop();
+//                 monto.stop();
+//               t.stop();
+//               t2.stop();
+//               t3.stop();
+//             tao.stop();
+//                tung.stop();
+//                tahan.stop();
+//                tahan2.stop();
+//                 tahan3.stop();
+//               tong.stop();
+//                tong2.stop();
+//              tong3.stop();
+//                sala.stop();
+//               sala2.stop();
+//                 sala3.stop();
+//               rsee.stop();
+//                 rsee2.stop();
+//                rsee3.stop();
+//                s.stop();
+//              s2.stop();
+//                s3.stop();
+//               tan.stop();
+//
 
 
     }
