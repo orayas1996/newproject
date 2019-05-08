@@ -33,13 +33,13 @@ public class Data extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data);
 
-
-        long t3 = getIntent().getExtras().getLong("time3");
-        long total_time = t3;
+        int total_time = getIntent().getExtras().getInt("time3");
 
         String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
-        DatabaseReference myRef = database.getReference("Users").child(userId).child("score1");
+
+        DatabaseReference myRef = database.getReference("Users").child(userId).child("Info");
         myRef.push().setValue(total_time);
+
 
         //get user id
         final String id_user = getIntent().getExtras().getString("id");

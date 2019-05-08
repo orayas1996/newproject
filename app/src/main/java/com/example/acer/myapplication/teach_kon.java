@@ -59,8 +59,8 @@ public class teach_kon extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 bb.setText("น.หนู");
-                view1.setImageResource(R.drawable.n_1);
-                view2.setImageResource(R.drawable.nn_1);
+                view1.setImageResource(R.drawable.nn_1);
+                view2.setImageResource(R.drawable.n_1);
                 view3.setImageResource(R.drawable.nnn_1);
                 tx1.setText("(อ่าน)");
                 tx2.setText("(ปะ-ติ-ทิน)");
@@ -215,24 +215,14 @@ public class teach_kon extends AppCompatActivity {
                 tx1.setText("");
                 tx2.setText("(ปลา - วาน)");
                 tx3.setText("");
-                b1.setOnClickListener(new View.OnClickListener() {
+
+                b2.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         la.start();
                     }
                 });
-                b2.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
 
-                    }
-                });
-                b3.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-                    }
-                });
             }
         });
 

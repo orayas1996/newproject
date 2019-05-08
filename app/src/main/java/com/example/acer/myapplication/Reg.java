@@ -104,8 +104,8 @@ public class Reg extends AppCompatActivity {
                     newPost.put("name",names);
                     newPost.put("id",user_id);
 
-                    current_us.child(user_id).child("name").setValue(newPost);
-                    current_us.child(user_id).child("name").setValue(newPost);
+                    current_us.child(user_id).child("Info").setValue(newPost);
+                    current_us.child(user_id).child("Info").setValue(newPost);
                     name.setText("");
 
 

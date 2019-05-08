@@ -352,7 +352,7 @@ public class match_t extends AppCompatActivity {
             btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent i = new Intent(match_t.this, Data.class);
+                    Intent i = new Intent(match_t.this, Score.class);
 //                    Intent in = new Intent(match_t.this,Data.class);
                     i.putExtra("time3",correct_time+t2);
                     startActivity(i);
