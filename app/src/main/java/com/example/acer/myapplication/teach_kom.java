@@ -1,5 +1,6 @@
 package com.example.acer.myapplication;
 
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,9 +9,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class teach_kom extends AppCompatActivity {
-    TextView title, bb, tx1, tx2, tx3;
-    Button iv11,b1, b2, b3;
-    ImageView view1, view2, view3;
+
+    Button b1, b2, b3;
+    ImageView img;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,48 +20,36 @@ public class teach_kom extends AppCompatActivity {
         setContentView(R.layout.activity_teach_kom);
 
 
-        final ImageView view1 = (ImageView) findViewById(R.id.imageView1);
-        final ImageView view2 = (ImageView) findViewById(R.id.imageView2);
-        final ImageView view3 = (ImageView) findViewById(R.id.imageView3);
+        final ImageView img = (ImageView) findViewById(R.id.imageView);
 
-        final TextView bb = (TextView) findViewById(R.id.bb);
-        final TextView tx1 = (TextView) findViewById(R.id.text1);
-        final TextView tx2 = (TextView) findViewById(R.id.text2);
-        final TextView tx3 = (TextView) findViewById(R.id.text3);
-        Button iv11 = (Button) findViewById(R.id.iv11);
+
         final Button b1 = (Button) findViewById(R.id.but1);
         final Button b2 = (Button) findViewById(R.id.but2);
         final Button b3 = (Button) findViewById(R.id.but3);
 
-        iv11.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                bb.setText("ม.ม้า");
-                view1.setImageResource(R.drawable.m_2);
-                view2.setImageResource(R.drawable.m_1);
-                view3.setImageResource(R.drawable.m1);
-                tx1.setText("มะ - ขาม");
-                tx2.setText("ฉะ - หลาม");
-                tx3.setText("กระ - เทียม");
+        final MediaPlayer m = MediaPlayer.create(this, R.raw.m_1);
+        final MediaPlayer m2 = MediaPlayer.create(this, R.raw.m_2);
+        final MediaPlayer m3 = MediaPlayer.create(this, R.raw.m_3);
+
+
                 b1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-
+                        m.start();
                     }
                 });
                 b2.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-
+                        m2.start();
                     }
                 });
                 b3.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-
+                        m3.start();
                     }
                 });
-            }
-        });
+
     }
 }

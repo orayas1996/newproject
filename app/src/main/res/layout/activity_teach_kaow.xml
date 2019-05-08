@@ -4,7 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".teach_kaow">
+    tools:context=".teach_kaow"
+    android:background="@color/colorbg6">
+
+
 
     <TextView
         android:id="@+id/Title"
@@ -16,7 +19,8 @@
         android:text="มาตรา แม่เกอว"
         android:textSize="40dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="#000"/>
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -68,7 +72,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="66dp"
             android:layout_marginTop="80dp"
-            app:srcCompat="@drawable/d2" />
+            app:srcCompat="@drawable/y1" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -76,7 +80,7 @@
             android:layout_height="120dp"
             android:layout_alignTop="@+id/imageView1"
             android:layout_centerHorizontal="true"
-            app:srcCompat="@drawable/d1" />
+            app:srcCompat="@drawable/w_1" />
 
         <ImageView
             android:id="@+id/imageView3"
@@ -85,16 +89,15 @@
             android:layout_alignParentRight="true"
             android:layout_alignTop="@+id/imageView1"
             android:layout_marginRight="69dp"
-            app:srcCompat="@drawable/d33" />
+            app:srcCompat="@drawable/w_2" />
 
         <TextView
             android:id="@+id/text1"
             style="@style/text"
             android:layout_width="wrap_content"
-            android:layout_alignParentLeft="true"
+            android:layout_alignLeft="@+id/but1"
             android:layout_below="@+id/imageView1"
-            android:layout_marginLeft="30dp"
-            android:text="(แค - หรอด)"
+            android:text="มะ - พร้าว"
             android:textAlignment="center" />
 
         <TextView
@@ -103,7 +106,7 @@
             android:layout_width="wrap_content"
             android:layout_below="@+id/imageView1"
             android:layout_centerHorizontal="true"
-            android:text="(รด)"
+            android:text="สี - เขียว"
             android:textAlignment="center" />
 
         <TextView
@@ -111,9 +114,9 @@
             style="@style/text"
             android:layout_width="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_alignTop="@+id/text1"
-            android:layout_marginRight="60dp"
-            android:text="(กะ - สัด)"
+            android:layout_below="@+id/imageView1"
+            android:layout_marginRight="96dp"
+            android:text="แมว"
             android:textAlignment="center" />
 
         <Button
@@ -132,10 +135,33 @@
         <Button
             android:id="@+id/but3"
             style="@style/but"
-            android:layout_alignRight="@+id/imageView3"
-            android:layout_below="@+id/text1" />
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/text1"
+            android:layout_marginRight="54dp" />
 
 
     </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:background="#fff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/homeAsUpIndicator" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:text="กลับหน้าเมนู"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
 </android.support.constraint.ConstraintLayout>

@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".teach_kod"
+            android:name=".teach_kaow"
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -52,7 +52,7 @@
         <activity android:name=".teach_kom"   android:screenOrientation="landscape" />
         <activity android:name=".teach_kon"   android:screenOrientation="landscape" />
         <activity android:name=".teach_kong"  android:screenOrientation="landscape"  />
-        <activity android:name=".teach_kaow"   android:screenOrientation="landscape" />
+        <activity android:name=".teach_kod"   android:screenOrientation="landscape" />
         <activity android:name=".teach_kia"  android:screenOrientation="landscape" ></activity>
     </application>
 

@@ -16,7 +16,7 @@ public class teach_kod extends AppCompatActivity {
 
     TextView title, bb, tx1, tx2, tx3;
     Button iv11, iv12, iv13, iv14, iv15, iv16, iv17, iv18, iv21, iv22, iv23, iv24, iv25, iv26, iv27, iv28, b1, b2, b3;
-    ImageView view1, view2, view3;
+    ImageView view1, view2, view3,img;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +26,7 @@ public class teach_kod extends AppCompatActivity {
         final ImageView view1 = (ImageView) findViewById(R.id.imageView1);
         final ImageView view2 = (ImageView) findViewById(R.id.imageView2);
         final ImageView view3 = (ImageView) findViewById(R.id.imageView3);
+        final ImageView img = (ImageView) findViewById(R.id.imageView);
 
         final TextView title = (TextView) findViewById(R.id.Title);
         final TextView bb = (TextView) findViewById(R.id.bb);

@@ -6,6 +6,29 @@
     android:layout_height="match_parent"
     tools:context=".teach_kom"
     android:background="@color/colorbg6">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:background="#fff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/homeAsUpIndicator" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:text="กลับหน้าเมนู"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
     <TextView
         android:id="@+id/Title"
         android:layout_width="220dp"
@@ -14,7 +37,7 @@
         android:layout_marginEnd="384dp"
         android:layout_marginRight="384dp"
         android:textColor="#060101"
-        android:text="มาตรา แม่กก"
+        android:text="มาตรา แม่กม"
         android:textSize="40dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -68,7 +91,7 @@
             android:layout_alignParentLeft="true"
             android:layout_below="@+id/bb"
             android:layout_marginLeft="67dp"
-            app:srcCompat="@drawable/m" />
+            app:srcCompat="@drawable/m_2" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -76,7 +99,7 @@
             android:layout_height="120dp"
             android:layout_alignTop="@+id/imageView1"
             android:layout_centerHorizontal="true"
-            app:srcCompat="@drawable/m1" />
+            app:srcCompat="@drawable/m_1" />
 
         <ImageView
             android:id="@+id/imageView3"
@@ -85,16 +108,15 @@
             android:layout_alignParentRight="true"
             android:layout_below="@+id/bb"
             android:layout_marginRight="68dp"
-            app:srcCompat="@drawable/m" />
+            app:srcCompat="@drawable/m1" />
 
         <TextView
             android:id="@+id/text1"
             style="@style/text"
             android:layout_width="wrap_content"
-            android:layout_alignParentLeft="true"
+            android:layout_alignLeft="@+id/but1"
             android:layout_below="@+id/imageView1"
-            android:layout_marginLeft="30dp"
-            android:text=""
+            android:text="(มะ - ขาม)"
             android:textAlignment="center" />
 
         <TextView
@@ -103,7 +125,7 @@
             android:layout_width="wrap_content"
             android:layout_below="@+id/imageView1"
             android:layout_centerHorizontal="true"
-            android:text=""
+            android:text="(ฉะ - หลาม)"
             android:textAlignment="center" />
 
         <TextView
@@ -111,9 +133,9 @@
             style="@style/text"
             android:layout_width="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_alignTop="@+id/text1"
-            android:layout_marginRight="60dp"
-            android:text=""
+            android:layout_below="@+id/imageView1"
+            android:layout_marginRight="45dp"
+            android:text="(กระ - เทียม)"
             android:textAlignment="center" />
 
         <Button

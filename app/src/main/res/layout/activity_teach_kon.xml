@@ -4,7 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".teach_kon">
+    tools:context=".teach_kon"
+    android:background="@color/colorbg6">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="55dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:background="#fff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/homeAsUpIndicator" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:text="กลับหน้าเมนู"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
 
     <TextView
         android:id="@+id/Title"
@@ -20,8 +43,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="771dp"
-        android:layout_height="94dp"
+        android:layout_width="669dp"
+        android:layout_height="77dp"
         android:layout_marginBottom="344dp"
         android:layout_marginEnd="84dp"
         android:layout_marginRight="84dp"
@@ -33,48 +56,48 @@
         <Button
             android:id="@+id/iv11"
             style="@style/btn"
-            android:layout_width="wrap_content"
-            android:layout_height="77dp"
+            android:layout_width="64dp"
+            android:layout_height="70dp"
             android:text="น"
             android:textAlignment="center" />
 
         <Button
             android:id="@+id/iv12"
             style="@style/btn"
-            android:layout_width="wrap_content"
-            android:layout_height="77dp"
+            android:layout_width="64dp"
+            android:layout_height="70dp"
             android:text="ญ"
             android:textAlignment="center" />
 
         <Button
             android:id="@+id/iv13"
             style="@style/btn"
-            android:layout_width="wrap_content"
-            android:layout_height="77dp"
+            android:layout_width="64dp"
+            android:layout_height="70dp"
             android:text="ณ"
             android:textAlignment="center" />
 
         <Button
             android:id="@+id/iv14"
             style="@style/btn"
-            android:layout_width="wrap_content"
-            android:layout_height="77dp"
+            android:layout_width="64dp"
+            android:layout_height="70dp"
             android:text="ร"
             android:textAlignment="center" />
 
         <Button
             android:id="@+id/iv15"
             style="@style/btn"
-            android:layout_width="wrap_content"
-            android:layout_height="77dp"
+            android:layout_width="64dp"
+            android:layout_height="70dp"
             android:text="ล"
             android:textAlignment="center" />
 
         <Button
             android:id="@+id/iv16"
             style="@style/btn"
-            android:layout_width="wrap_content"
-            android:layout_height="77dp"
+            android:layout_width="64dp"
+            android:layout_height="70dp"
             android:text="ฬ"
             android:textAlignment="center" />
     </LinearLayout>
@@ -107,7 +130,7 @@
             android:layout_alignParentLeft="true"
             android:layout_below="@+id/bb"
             android:layout_marginLeft="67dp"
-            app:srcCompat="@drawable/d2" />
+            app:srcCompat="@drawable/bb" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -115,7 +138,7 @@
             android:layout_height="120dp"
             android:layout_alignTop="@+id/imageView1"
             android:layout_centerHorizontal="true"
-            app:srcCompat="@drawable/d1" />
+            app:srcCompat="@drawable/bb" />
 
         <ImageView
             android:id="@+id/imageView3"
@@ -124,7 +147,7 @@
             android:layout_alignParentRight="true"
             android:layout_below="@+id/bb"
             android:layout_marginRight="68dp"
-            app:srcCompat="@drawable/d33" />
+            app:srcCompat="@drawable/bb" />
 
         <TextView
             android:id="@+id/text1"
@@ -133,7 +156,7 @@
             android:layout_alignParentLeft="true"
             android:layout_below="@+id/imageView1"
             android:layout_marginLeft="30dp"
-            android:text="(แค - หรอด)"
+            android:text=""
             android:textAlignment="center" />
 
         <TextView
@@ -142,7 +165,7 @@
             android:layout_width="wrap_content"
             android:layout_below="@+id/imageView1"
             android:layout_centerHorizontal="true"
-            android:text="(รด)"
+            android:text=""
             android:textAlignment="center" />
 
         <TextView
@@ -152,7 +175,7 @@
             android:layout_alignParentRight="true"
             android:layout_alignTop="@+id/text1"
             android:layout_marginRight="60dp"
-            android:text="(กะ - สัด)"
+            android:text=""
             android:textAlignment="center" />
 
         <Button
