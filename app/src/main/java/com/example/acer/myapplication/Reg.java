@@ -102,10 +102,10 @@ public class Reg extends AppCompatActivity {
 
                     Map newPost = new HashMap();
                     newPost.put("name",names);
-                    newPost.put("id",user_id);
+//                    newPost.put("id",user_id);
 
-                    current_us.child(user_id).child("score1").setValue(newPost);
-                    current_us.child(user_id).child("score1").setValue(newPost);
+                    current_us.child(user_id).setValue(newPost);
+//                    current_us.child(user_id).child("score1").setValue(newPost);
                     name.setText("");
 
 

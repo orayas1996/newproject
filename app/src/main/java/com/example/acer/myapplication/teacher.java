@@ -1,6 +1,7 @@
 package com.example.acer.myapplication;
 
 import android.content.Intent;
+import android.nfc.Tag;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -24,6 +25,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 public class teacher extends AppCompatActivity {
 
@@ -47,23 +49,35 @@ public class teacher extends AppCompatActivity {
 
         final String userId = FirebaseAuth.getInstance().getUid();
 
-        DatabaseReference myRef = database.getReference("Users").child(userId);
+        DatabaseReference myRef = database.getReference("Users");
 
         myRef.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-                for( DataSnapshot namesnap : dataSnapshot.getChildren()) {
-//                    Log.v("mmm",""+ namesnap.child("name").getKey()); //displays the key for the node
-                    String value = namesnap.getValue(String.class);
-                    Log.d("mmm",""+ value);
-                    if(value != null){
-                    name.add(value);
-                  }
-//                    String value = dataSnapshot.getValue(String.class);
-//                    Log.d("fff", "value is " + value);
+                Map<String, Object> map = (Map<String, Object>) dataSnapshot.getValue();
+                Log.d("sss" ,"Value is: " + map);
+                name.add(String.valueOf(map));
+
+//                for (DataSnapshot childSnapshot: dataSnapshot.getChildren()) {
+//                    String nnn = childSnapshot.getKey();
+//                    Log.d("mmm", "name " + nnn);
+//                    String names = childSnapshot.getValue(String.class);
+//                    name.add(names);
+//
+//                }
+
+//                for( DataSnapshot namesnap : dataSnapshot.getChildren()) {
+//                    Log.v("mmm",""+ namesnap.getKey()); //displays the key for the node
+//                    String value = namesnap.getValue(String.class);
+//                    Log.d("nnn",""+ value);
+////                    if(value != null){
+////                    name.add(value);
+////                  }
+////                    String value = dataSnapshot.getValue(String.class);
+////                    Log.d("fff", "value is " + value);
                     arrayAdapter.notifyDataSetChanged();
 
-                }
+//                }
             }
 
             @Override
@@ -88,18 +102,18 @@ public class teacher extends AppCompatActivity {
         });
 
 
-        namelist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String pos = parent.getItemAtPosition(position).toString();
-                Log.d("ss","pos ="+ pos);
-                Intent i = new Intent(teacher.this,Data.class);
-                i.putExtra("pos",pos);
-                startActivity(i);
-
-
-            }
-        });
+//        namelist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                String pos = parent.getItemAtPosition(position).toString();
+//                Log.d("ss","pos ="+ pos);
+//                Intent i = new Intent(teacher.this,Data.class);
+//                i.putExtra("pos",pos);
+//                startActivity(i);
+//
+//
+//            }
+//        });
 
     }
 }

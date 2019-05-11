@@ -381,7 +381,7 @@ public class match_t extends AppCompatActivity {
         img14 = R.drawable.w;
         img21 = R.drawable.n;
         img22 = R.drawable.m;
-        img23 = R.drawable.b3;
+        img23 = R.drawable.ppp_1;
         img24 = R.drawable.y1;
         img31 = R.drawable.d3;
         img32 = R.drawable.w1;
