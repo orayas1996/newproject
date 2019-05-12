@@ -7,13 +7,87 @@
     android:layout_height="match_parent"
     tools:context=".teacher">
 
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:background="@color/colorbg6"
+        android:text="ข้อมูลนักเรียน"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/nameview"
+        android:layout_marginLeft="108dp"
+        android:text="ชื่อ"
+        android:textSize="32dp"
+        android:textColor="#000"/>
+
+    <TextView
+        android:id="@+id/nameview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/name"
+        android:layout_marginLeft="186dp"
+        android:text=""
+        android:textColor="#000"
+        android:textSize="32dp" />
+
+    <TextView
+        android:id="@+id/showtime"
+        android:layout_width="483dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/name_list"
+        android:layout_alignTop="@+id/nameview"
+        android:text="เวลาที่ใช้ในการเล่นเกม"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:background="@color/colorbg3"
+        android:textColor="#000"/>
 
     <ListView
         android:id="@+id/name_list"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="482dp"
+        android:layout_height="502dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/showtime"
+        android:background="@color/colorbg2" />
+
+    <RelativeLayout
+        android:layout_width="478dp"
+        android:layout_height="400dp"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true" />
+        android:background="@color/colorbg4">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="ข้อมูลการวิเคราะห์ความเสี่ยง"
+            android:textSize="20dp"
+            android:background="@color/colorbg3"
+            android:textAlignment="center"
+            android:textColor="#000"/>
+
+        <TextView
+            android:id="@+id/scoreLD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="63dp"
+            android:text=""
+            android:textColor="#000"
+            android:textSize="32dp" />
+
+    </RelativeLayout>
 
 
-</RelativeLayout>
+    </RelativeLayout>

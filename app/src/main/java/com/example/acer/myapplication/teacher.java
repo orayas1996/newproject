@@ -21,6 +21,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import org.w3c.dom.Text;
 
@@ -29,70 +30,46 @@ import java.util.Map;
 
 public class teacher extends AppCompatActivity {
 
-    private ListView namelist;
-    private ArrayList<String> name = new ArrayList<>();
-    FirebaseDatabase database = FirebaseDatabase.getInstance();
-
-
+    private ListView sclist;
+    TextView namev,scoreld;
+    private ArrayList<Long> score1 = new ArrayList<>();
+    DatabaseReference databaseReference,db2;
     FirebaseAuth mAuth;
     FirebaseUser user;
+    String uid;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teacher);
 
-        namelist = (ListView) findViewById(R.id.name_list);
+        namev = (TextView) findViewById(R.id.nameview);
+        scoreld = (TextView) findViewById(R.id.scoreLD);
+        sclist = (ListView) findViewById(R.id.name_list);
 
-        final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,name);
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        uid = user.getUid();
+        databaseReference = FirebaseDatabase.getInstance().getReference("Users");
+        db2 = FirebaseDatabase.getInstance().getReference("Users").child(uid).child("sc");
 
-        namelist.setAdapter(arrayAdapter);
 
-        final String userId = FirebaseAuth.getInstance().getUid();
 
-        DatabaseReference myRef = database.getReference("Users");
+        final ArrayAdapter<Long> arrayAdapter = new ArrayAdapter<Long>(this, android.R.layout.simple_list_item_1,score1);
 
-        myRef.addChildEventListener(new ChildEventListener() {
+        sclist.setAdapter(arrayAdapter);
+
+//        final String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        Log.d("uuu","u "+ uid);
+
+//        DatabaseReference myRef = database.getReference("Users").child(userId).child("name");
+
+        databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-                Map<String, Object> map = (Map<String, Object>) dataSnapshot.getValue();
-                Log.d("sss" ,"Value is: " + map);
-                name.add(String.valueOf(map));
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-//                for (DataSnapshot childSnapshot: dataSnapshot.getChildren()) {
-//                    String nnn = childSnapshot.getKey();
-//                    Log.d("mmm", "name " + nnn);
-//                    String names = childSnapshot.getValue(String.class);
-//                    name.add(names);
-//
-//                }
-
-//                for( DataSnapshot namesnap : dataSnapshot.getChildren()) {
-//                    Log.v("mmm",""+ namesnap.getKey()); //displays the key for the node
-//                    String value = namesnap.getValue(String.class);
-//                    Log.d("nnn",""+ value);
-////                    if(value != null){
-////                    name.add(value);
-////                  }
-////                    String value = dataSnapshot.getValue(String.class);
-////                    Log.d("fff", "value is " + value);
-                    arrayAdapter.notifyDataSetChanged();
-
-//                }
-            }
-
-            @Override
-            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-
-            }
-
-            @Override
-            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
-
-            }
-
-            @Override
-            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-
+                    String names = dataSnapshot.child(uid).child("name").getValue(String.class);
+                    namev.setText(names);
             }
 
             @Override
@@ -100,6 +77,26 @@ public class teacher extends AppCompatActivity {
 
             }
         });
+         db2.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot childSnapshot : dataSnapshot.getChildren()) {
+                    long value = childSnapshot.getValue(long.class);
+                    Log.d("fff", "value is " + value);
+                    score1.add(value);
+                    arrayAdapter.notifyDataSetChanged();
+                }
+                long score_ld =  score1.get(0);
+                Log.d("ddd","sc " + score_ld);
+                scoreld.setText(String.valueOf(score_ld));
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
 
 
 //        namelist.setOnItemClickListener(new AdapterView.OnItemClickListener() {

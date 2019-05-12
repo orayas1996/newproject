@@ -56,13 +56,13 @@ public class login extends AppCompatActivity {
             }
         });
 
-        teach.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(login.this,teacher.class);
-                startActivity(i);
-            }
-        });
+//        teach.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i = new Intent(login.this,teacher.class);
+//                startActivity(i);
+//            }
+//        });
 
 
 
